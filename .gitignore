@@ -1,0 +1,36 @@
+# Build output
+dist/
+build/
+
+# Coverage and test output
+coverage/
+nyc_output/
+jest-output/
+test-results/
+
+# Editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Env files
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+*.tsbuildinfo
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Others
+tmp/
+temp/

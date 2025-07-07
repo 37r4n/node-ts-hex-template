@@ -1,0 +1,30 @@
+{
+  "name": "node-ts-hex-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev index.ts",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/37r4n/node-ts-hex-template.git"
+  },
+  "author": "Eduardo Cortés",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/37r4n/node-ts-hex-template/issues"
+  },
+  "homepage": "https://github.com/37r4n/node-ts-hex-template#readme",
+  "dependencies": {
+    "dotenv": "^17.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
