@@ -1,4 +1,5 @@
+import { ConflictError } from './conflct';
 import { InternalServerError } from './interal-server';
 import { InvalidArgumentError } from './invalid-argument';
 
-export { InternalServerError, InvalidArgumentError };
+export { ConflictError, InternalServerError, InvalidArgumentError };
