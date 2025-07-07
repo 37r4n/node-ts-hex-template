@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 export const config = {
   app: {
     name: process.env.APP_NAME ?? 'node-hex-template',
