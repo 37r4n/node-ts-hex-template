@@ -1,39 +1,28 @@
 import { Application } from 'express';
 import { ServerOptions } from './types';
+import { Host, Port } from '../value-objects';
 
 export class Server {
   private readonly _app: Application;
-  private readonly _host: string;
-  private readonly _port: number;
+  private readonly _host: Host;
+  private readonly _port: Port;
 
   constructor({ app, host, port }: ServerOptions) {
     this._app = app;
-    this._host = host;
-    this._port = port;
+    this._host = new Host({ value: host });
+    this._port = new Port({ value: port });
   }
 
   public async start(): Promise<this> {
     await new Promise<void>((resolve, reject) => {
       this._app
-        .listen(this._port, () => {
-          console.log(`Server is running on http://${this._host}:${this._port}`);
+        .listen(this._port.value, () => {
+          console.log(`Server is running on http://${this._host.value}:${this._port.value}`);
           resolve();
         })
         .on('error', reject);
     });
 
     return this;
-  }
-
-  public get app(): Application {
-    return this._app;
-  }
-
-  public get host(): string {
-    return this._host;
-  }
-
-  public get port(): number {
-    return this._port;
   }
 }
